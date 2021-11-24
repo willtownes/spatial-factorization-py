@@ -3,7 +3,9 @@ Probabilistic factor models for spatially correlated data. Includes nonnegative 
 
 ## Installation
 From github: 
-```pip install git+https://github.com/willtownes/spatial-factorization-py.git#egg=spatial-factorization```
+```sh
+pip install git+https://github.com/willtownes/spatial-factorization-py.git#egg=spatial-factorization
+```
 Pypi coming soon.
 
 ## Usage
