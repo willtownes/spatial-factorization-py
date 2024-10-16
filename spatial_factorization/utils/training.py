@@ -18,7 +18,7 @@ from tempfile import TemporaryDirectory
 #from scipy.stats import pearsonr,linregress
 from os import path
 
-from utils.misc import mkdir_p, pickle_to_file, unpickle_from_file, rpad
+from spatial_factorization.utils.misc import mkdir_p, pickle_to_file, unpickle_from_file, rpad
 
 class NumericalDivergenceError(ValueError):
   pass

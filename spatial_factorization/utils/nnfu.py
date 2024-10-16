@@ -11,7 +11,7 @@ Created on Thu Sep 23 13:30:10 2021
 import numpy as np
 from sklearn.decomposition import NMF
 # from scipy.special import logsumexp
-from utils.misc import lnormal_approx_dirichlet
+from spatial_factorization.utils.misc import lnormal_approx_dirichlet
 
 def normalize_cols(W):
   """

@@ -11,8 +11,8 @@ Created on Wed May 19 10:03:53 2021
 import numpy as np
 from copy import deepcopy
 from pandas import DataFrame
-from utils.misc import t2np,nan_to_zero
-from utils.nnfu import normalize_rows,normalize_cols
+from spatial_factorization.utils.misc import t2np,nan_to_zero
+from spatial_factorization.utils.nnfu import normalize_rows,normalize_cols
 
 def compare_loadings(W,Wtrue):
   W,_ = normalize_rows(W)
