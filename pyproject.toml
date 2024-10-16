@@ -1,5 +1,16 @@
 [build-system]
-requires = [
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "spatial_factorization"
+dynamic = ["version"]
+
+authors = [
+  { name="Will Townes", email="will.townes@gmail.com" },
+]
+
+dependencies = [
     "anndata>=0.7",
     "dill>=0.3",
     "numpy>=1.19",
@@ -12,4 +23,44 @@ requires = [
     "tensorflow_probability>=0.13",
     "wheel"
 ]
-build-backend = "setuptools.build_meta"
+
+description = "Spatially-aware probabilistic factor models"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Bio-Informatics"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/willtownes/spatial-factorization-py"
+"Bug Tracker" = "https://github.com/willtownes/spatial-factorization-py/issues"
+
+[tool]
+
+[tool.hatch.version]
+path = "src/__about__.py"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "src/*.py",
+  "src/utils/*.py",
+]
+
+[tool.hatch.build.targets.wheel]
+include = [
+  "src/*.py",
+  "src/utils/*.py",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
