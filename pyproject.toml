@@ -48,18 +48,19 @@ classifiers = [
 [tool]
 
 [tool.hatch.version]
-path = "src/__about__.py"
+path = "src/spatial_factorization/__about__.py"
 
 [tool.hatch.build.targets.sdist]
 include = [
-  "src/*.py",
-  "src/utils/*.py",
+  "src/spatial_factorization/*.py",
+  "src/spatial_factorization/utils/*.py",
 ]
 
 [tool.hatch.build.targets.wheel]
+packages = ["src/spatial_factorization"]
 include = [
-  "src/*.py",
-  "src/utils/*.py",
+  "src/spatial_factorization/*.py",
+  "src/spatial_factorization/utils/*.py",
 ]
 
 [tool.pytest.ini_options]
