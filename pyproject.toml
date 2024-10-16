@@ -21,7 +21,6 @@ dependencies = [
     "squidpy>=1.1",
     "tensorflow>=2.5",
     "tensorflow_probability>=0.13",
-    "wheel"
 ]
 
 description = "Spatially-aware probabilistic factor models"
@@ -48,19 +47,18 @@ classifiers = [
 [tool]
 
 [tool.hatch.version]
-path = "src/spatial_factorization/__about__.py"
+path = "spatial_factorization/__about__.py"
 
 [tool.hatch.build.targets.sdist]
 include = [
-  "src/spatial_factorization/*.py",
-  "src/spatial_factorization/utils/*.py",
+  "spatial_factorization/*.py",
+  "spatial_factorization/utils/*.py",
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/spatial_factorization"]
 include = [
-  "src/spatial_factorization/*.py",
-  "src/spatial_factorization/utils/*.py",
+  "spatial_factorization/*.py",
+  "spatial_factorization/utils/*.py",
 ]
 
 [tool.pytest.ini_options]
